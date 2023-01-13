@@ -1,0 +1,6 @@
+dependencies:
+- name: shared
+  repository: file://../library-charts/shared
+  version: 1.0.0
+digest: sha256:1a661053745082023affd1a5ada4a2022f827ac97feadd0661f2cec31322b5c0
+generated: "2023-01-12T18:30:47.82803-08:00"

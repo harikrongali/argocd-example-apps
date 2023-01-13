@@ -13,6 +13,15 @@ service:
   type: ClusterIP
   port: 80
 
+configMap:
+  dataAutoGen:
+    CALL_MIGRATION_SERVICE: 'true'
+    OTEL_RESOURCE_ATTRIBUTES: "service.name=kafka-connectors"
+    SLACK_WEBHOOK: "<path:samsa/defaults#slackwh>"
+    EMERGING_THREATS_TOKEN: "<path:samsa/defaults#emergingthreatstoken>"
+  dataMarathon:
+    MARATHON_APP_RESOURCE_MEM: "4096"
+
 ingress:
   enabled: false
   annotations: {}

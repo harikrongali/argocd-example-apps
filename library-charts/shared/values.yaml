@@ -1,0 +1,7 @@
+# These values will be overridden in the helm chart itself
+
+namespace: ""
+serviceName: ""
+configMap:
+  dataAutoGen: {}
+  dataMarathon: {}
