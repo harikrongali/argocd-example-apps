@@ -3,7 +3,6 @@ masterEnvName: adevus3
 clusterType: devtest
 internalIngressEnabled: false
 
-namespace: adevus3
 
 etcd:
   host: "etcd.adevus3.svc.cluster.local"
