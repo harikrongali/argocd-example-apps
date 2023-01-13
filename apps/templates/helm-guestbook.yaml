@@ -3,11 +3,9 @@ kind: Application
 metadata:
   name: helm-guestbook
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-    argocd.argoproj.io/manifest-generate-paths: /helm-guestbook;/../config/common-values.yaml;
+    argocd.argoproj.io/manifest-generate-paths: /helm-guestbook;/../config/common-values.yaml
 spec:
   destination:
     namespace: helm-guestbook
