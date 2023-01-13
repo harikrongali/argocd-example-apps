@@ -10,7 +10,7 @@ etcd:
 configMap:
   dataAutoGen:
     GRAPHITE_HOST: wavefront-proxy.kube-system.svc.cluster.local
-    GRAPHITE_PORT: '20033'
+    GRAPHITE_PORT: '2003'
     WAVEFRONT_PROXY_HOST: wavefront-proxy.kube-system.svc.cluster.local
     WAVEFRONT_PROXY_PORT: '2878'
     REDIS_PORT: '10030'
