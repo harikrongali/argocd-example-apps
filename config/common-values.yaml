@@ -1,0 +1,40 @@
+envName: adevus3
+masterEnvName: adevus3
+clusterType: devtest
+internalIngressEnabled: false
+
+namespace: adevus3
+
+etcd:
+  host: "etcd.adevus3.svc.cluster.local"
+
+configMap:
+  dataAutoGen:
+    GRAPHITE_HOST: wavefront-proxy.kube-system.svc.cluster.local
+    GRAPHITE_PORT: '2003'
+    WAVEFRONT_PROXY_HOST: wavefront-proxy.kube-system.svc.cluster.local
+    WAVEFRONT_PROXY_PORT: '2878'
+    REDIS_PORT: '10030'
+    OTEL_TRACES_EXPORTER: "otlp"
+    OTEL_METRICS_EXPORTER: "none"
+    OTEL_EXPORTER_OTLP_ENDPOINT: "http://opentelemetry-collector.default:55680"
+    MON_WAVEFRONT_PROXY_HOST: wavefront-proxy-mon.monitoring.svc.cluster.local
+    MON_WAVEFRONT_PROXY_PORT: '2878'
+    MON_GRAPHITE_HOST: wavefront-proxy-mon.monitoring.svc.cluster.local
+    MON_GRAPHITE_PORT: '2003'
+    EXTERNAL_DB_SNOWFLAKE_ALIAS: snowflake_acnt1
+    WAREHOUSE_POOL_NAME: load_pool
+    USER_ALIAS: load_user
+    LW_DEFAULT_SNOWFLAKE_ACCOUNT_ALIAS: snowflake_acnt1
+    LW_DEFAULT_SNOWFLAKE_USER_ALIAS: load_user
+    LW_DEFAULT_SNOWFLAKE_WAREHOUSE_POOL_ALIAS: load_pool
+    DOMAIN_NAME: adevus3.dev.corp.lacework.net
+    LW_HOST_ENV_NAME: adevus3
+    LW_HOST_ENV_TYPE: adevus3
+    LW_HOST_CLUSTER_REGION: dev
+    LW_HOST_ACCOUNT: '249446771485'
+    LW_HOST_AWS_REGION: us-west-2
+    LW_HOST_AWS_REGION2: US_WEST_2
+    VM_SERVER_ADDRESS: "http://vmsingle-vm.vm:8429"
+  dataMarathon:
+    MARATHON_APP_RESOURCE_MEM: '512'
