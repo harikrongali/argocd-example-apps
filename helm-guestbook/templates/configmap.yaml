@@ -4,11 +4,13 @@ apiVersion: v1
 kind: Secret
 type: Opaque
 metadata:
-  name: gg-env-file
+  name: gg-envv-file
   labels:
     lacework.net/service_owner: data-platform
+#stringData:
+#  fileContents: |-
+#{{- range $key, $val := $.Values.configMap.dataAutoGen }}
+#    {{ $key }}={{ $val }}
+#{{- end }}
 stringData:
-  fileContents: |-
-{{- range $key, $val := $.Values.configMap.dataAutoGen }}
-    {{ $key }}={{ $val }}
-{{- end }}
+  fileContents: true
